@@ -1,10 +1,8 @@
-import './App.css';
+import Body from './components/Body';
 
 function App() {
   return (
-    <div className="App font-bold" >
-        Namaste React from netflix-GPT
-    </div>
+     <Body/>
   );
 }
 

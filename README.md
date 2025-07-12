@@ -2,6 +2,7 @@
 
 - Create React App
 - Configured TailwindCSS
+- Created Components 
 
 # Features
 - Login/SignUp Page
