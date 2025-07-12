@@ -12,7 +12,9 @@ const Header = () => {
         </div>
         <div className='p-4 mr-20 flex items-center bg-gradient-to-b from-black'>
            <button className="text-white w-32 h-8 mx-4 border border-gray-300 rounded">English</button>
-           <button  className="text-white w-20  h-8  rounded bg-red-600 font-medium ">Sign In</button>
+           <a href='./login'>
+                  <button  className="text-white w-20  h-8  rounded bg-red-600 font-medium ">Sign In</button>
+          </a>
         </div>
     </div>
   )
