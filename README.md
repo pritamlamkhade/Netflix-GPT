@@ -3,6 +3,7 @@
 - Create React App
 - Configured TailwindCSS
 - Created Components 
+- Setup Rounting
 
 # Features
 - Login/SignUp Page
