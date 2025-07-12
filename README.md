@@ -4,6 +4,8 @@
 - Configured TailwindCSS
 - Created Components 
 - Setup Rounting
+- Header
+- login form
 
 # Features
 - Login/SignUp Page
