@@ -5,7 +5,9 @@
 - Created Components 
 - Setup Rounting
 - Header
-- login form
+- Login/Sign Up form
+- Form Validations
+
 
 # Features
 - Login/SignUp Page
