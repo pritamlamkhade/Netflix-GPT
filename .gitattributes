@@ -1,4 +1,7 @@
 build/ linguist-vendored
 node_modules/ linguist-vendored
+*.js linguist-language=JavaScript
 *.jsx linguist-language=JavaScript
 *.tsx linguist-language=TypeScript
+
+
