@@ -8,6 +8,7 @@
 - Login/Sign Up form
 - Form Validations
 - Deployed project with Firebase https://netflixgpt-1fe73.web.app/
+- Sign up/Sign in Authentication using email and password
 
 
 

@@ -1,6 +1,9 @@
 import React, { useRef, useState } from 'react'
 import { checkValidData } from '../utils/validate'
 import { Eye, EyeOff } from "lucide-react"; 
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../utils/firebase';
+
 
 
 const Login = () => {
@@ -13,6 +16,20 @@ const Login = () => {
   const handleButtonClick=()=>{
       const message= checkValidData({type: "login",email: email.current.value,password: password.current.value});
       setErrorMessage(message);
+      if(message) return;
+
+      //sign in user logic
+      signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user)
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode +"-"+errorMessage);
+        });
   }
 
   return (
