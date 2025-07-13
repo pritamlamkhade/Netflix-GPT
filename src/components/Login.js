@@ -3,8 +3,7 @@ import { checkValidData } from '../utils/validate'
 import { Eye, EyeOff } from "lucide-react"; 
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../utils/firebase';
-
-
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
@@ -12,6 +11,7 @@ const Login = () => {
   const password = useRef(null)
   const [errorMessage, setErrorMessage] =useState(null);
   const [showPassword, setShowPassword] = useState(false);
+  const navigate= useNavigate();
 
   const handleButtonClick=()=>{
       const message= checkValidData({type: "login",email: email.current.value,password: password.current.value});
@@ -23,7 +23,7 @@ const Login = () => {
         .then((userCredential) => {
           const user = userCredential.user;
           console.log(user)
-          // ...
+          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
