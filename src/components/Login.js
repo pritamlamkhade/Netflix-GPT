@@ -1,11 +1,14 @@
 import React, { useRef, useState } from 'react'
 import { checkValidData } from '../utils/validate'
+import { Eye, EyeOff } from "lucide-react"; 
+
 
 const Login = () => {
 
   const email = useRef(null);
   const password = useRef(null)
-  const [errorMessage, setErrorMessage] =useState(null)
+  const [errorMessage, setErrorMessage] =useState(null);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleButtonClick=()=>{
       const message= checkValidData({type: "login",email: email.current.value,password: password.current.value});
@@ -31,7 +34,12 @@ const Login = () => {
             <h1 className='text-white font-extrabold text-3xl mb-6 ml-2 self-start'>Sign In</h1>
            
             <input placeholder='Email or mobile number' ref={email} type='text' className='text-white w-[352px] h-[56px] p-2 m-2 border border-gray-500 rounded bg-black/20' />
-            <input placeholder='Password' type='password' ref ={password} className=' text-white w-[352px] h-[56px] p-2 m-2 border border-gray-500 rounded bg-black/10'/>
+            
+            <input placeholder='Password'  type={showPassword ? "text" : "password"} ref ={password} className=' text-white w-[352px] h-[56px] p-2 m-2 border border-gray-500 rounded bg-black/10'/>
+             <button type="button"onClick={() => setShowPassword((prev) => !prev)} className="absolute top-[225px] right-[80px] transform -translate-y-1/2 text-gray-400">
+              {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+            </button>
+
             {errorMessage && <p className='text-red-500 text-sm self-start mx-2 mb-2'>{errorMessage}</p>}
            
             <button  className="text-white w-[352px]  h-[40px] m-2  rounded bg-red-600 font-medium " onClick={handleButtonClick}>Sign In</button>
