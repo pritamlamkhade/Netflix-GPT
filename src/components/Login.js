@@ -45,7 +45,7 @@ const Login = () => {
             <button  className="text-white w-[352px]  h-[40px] m-2  rounded bg-red-600 font-medium " onClick={handleButtonClick}>Sign In</button>
             <label className='text-white my-4'>OR</label>
             <button  className="text-white w-[352px]  h-[40px]  rounded bg-white/25 font-medium ">Use a sign-in code</button>
-            <a href="/." className='text-white m-2 underline'>Forgot password?</a>
+            <a href="./login" className='text-white m-2 underline'>Forgot password?</a>
 
             <div className="flex items-center self-start  my-4 mx-4">
               <input type="checkbox" id="remember" className="w-4 h-4 accent-white" />
@@ -58,7 +58,7 @@ const Login = () => {
             </div>
 
             <span className='text-gray-300 text-sm  my-2 mx-4'>This page is protected by Google reCAPTCHA to ensure you're not a bot.</span>
-            <a href='./' className='text-sm text-blue-500 underline self-start mx-4'>Learn more.</a>
+            <a href='./login' className='text-sm text-blue-500 underline self-start mx-4'>Learn more.</a>
         </form>
   
 
