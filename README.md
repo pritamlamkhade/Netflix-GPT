@@ -1,4 +1,8 @@
+
+
 # Netflix GPT
+
+🎬 Netflix-GPT is a React-based streaming app UI clone powered by TMDB API and OpenAI, offering personalized movie recommendations with authentication using Firebase.
 
 - Create React App
 - Configured TailwindCSS
