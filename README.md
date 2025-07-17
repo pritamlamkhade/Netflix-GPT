@@ -20,6 +20,10 @@
 - Registered TMDB API & Created TMDB APP and get access token
 - Got Data from TMDB now playing movies list API 
 - Created Movies Slice and added now playing movies to store.
+- Fetch data for trailer video
+- Update the store with the trailer video data
+- Embeded the youtube video and make autoplay and mute
+- Created secondary container for browse page - movie list, movie card, custom hooks for diff movie lists 
 
 
 

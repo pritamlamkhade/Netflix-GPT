@@ -5,7 +5,7 @@ import { Play ,Info  } from 'lucide-react';
 
 const VideoDescription = ({title, overview}) => {
   return (
-    <div className='pt-[15%] px-24 absolute w-screen aspect-video bg-gradient-to-r from-black'>
+    <div className='pt-[12%] px-24 absolute w-screen aspect-video bg-gradient-to-r from-black'>
         <h1 className='text-6xl w-1/3 text-white font-bold'>{title}</h1>
         <p className='py-6 text-xl w-1/3 text-white'>{overview}</p>
         <div className='flex'>
