@@ -46,7 +46,7 @@ const Body = () => {
       },[]);
 
       return (
-        <div  className='bg-black/90 h-screen w-screen'>
+        <div  className='bg-white h-screen w-screen'>
             <RouterProvider router={appRouter}/>
         </div>
       )
