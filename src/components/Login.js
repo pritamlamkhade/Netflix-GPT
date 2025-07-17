@@ -26,9 +26,9 @@ const Login = () => {
           navigate("/browse");
         })
         .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          setErrorMessage(errorCode +"-"+errorMessage);
+          // const errorCode = error.code;
+          // const errorMessage = error.message;
+          setErrorMessage("Invalid email or password.");
         });
   }
 

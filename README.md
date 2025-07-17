@@ -16,6 +16,7 @@
 - Created Redux Store with userSlice
 - Implemeted Sign out 
 - Implemented Update Profile 
+- unSubscribe to the onAuthStateChanged callback
 
 
 
