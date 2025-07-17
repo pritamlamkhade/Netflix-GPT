@@ -4,6 +4,7 @@ import { Eye, EyeOff } from "lucide-react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../utils/firebase';
 import { useNavigate } from 'react-router-dom';
+import { BG_IMG, LOGO } from '../utils/constant';
 
 const Login = () => {
 
@@ -38,13 +39,13 @@ const Login = () => {
         <div className='pl-32 py-2 bg-gradient-to-b from-black' >
             <img 
             className='w-48'
-            src="https://help.nflxext.com/helpcenter/OneTrust/oneTrust_production_2025-07-01/consent/87b6a5c0-0104-4e96-a291-092c11350111/01938dc4-59b3-7bbc-b635-c4131030e85f/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
+            src={LOGO}
             alt="logo"
             ></img>
         </div>
       </div>
         <div className='absolute'>
-            <img src="https://assets.nflxext.com/ffe/siteui/vlv3/7d2359a4-434f-4efa-9ff3-e9d38a8bde7f/web/IN-en-20250707-TRIFECTA-perspective_4faa9280-a2c5-4e07-aafc-a45ce43fea09_large.jpg" alt="background-img"></img>
+            <img src={BG_IMG} alt="background-img"></img>
         </div>
 
         <form onSubmit={(e)=>e.preventDefault()}  className=' w-[480px] border-black/85 rounded py-14 px-14 mt-40 absolute bg-black/85 mx-auto left-0 right-0 flex flex-col items-center'>

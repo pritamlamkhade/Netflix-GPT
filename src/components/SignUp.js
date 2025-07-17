@@ -7,6 +7,7 @@ import { auth } from '../utils/firebase';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { BG_IMG } from '../utils/constant';
 
 const SignUp = () => {
   const name = useRef(null);
@@ -58,7 +59,7 @@ const SignUp = () => {
     <div >
          <Header/>         
         <div className='absolute'>
-            <img src="https://assets.nflxext.com/ffe/siteui/vlv3/7d2359a4-434f-4efa-9ff3-e9d38a8bde7f/web/IN-en-20250707-TRIFECTA-perspective_4faa9280-a2c5-4e07-aafc-a45ce43fea09_large.jpg" alt="background-img"></img>
+            <img src={BG_IMG} alt="background-img"></img>
         </div>
         <form  onSubmit={(e)=>e.preventDefault()} className=' w-[480px] border-black/85 rounded py-14 px-14 mt-40 absolute bg-black/85 mx-auto left-0 right-0 flex flex-col items-center'>
 
