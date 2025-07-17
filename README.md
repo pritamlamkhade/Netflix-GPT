@@ -17,7 +17,9 @@
 - Implemeted Sign out 
 - Implemented Update Profile 
 - unSubscribe to the onAuthStateChanged callback
-
+- Registered TMDB API & Created TMDB APP and get access token
+- Got Data from TMDB now playing movies list API 
+- Created Movies Slice and added now playing movies to store.
 
 
 

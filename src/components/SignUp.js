@@ -58,8 +58,8 @@ const SignUp = () => {
   return (
     <div >
          <Header/>         
-        <div className='absolute'>
-            <img src={BG_IMG} alt="background-img"></img>
+        <div className='absolute bg-template'>
+            {/* <img src={BG_IMG} alt="background-img"></img> */}
         </div>
         <form  onSubmit={(e)=>e.preventDefault()} className=' w-[480px] border-black/85 rounded py-14 px-14 mt-40 absolute bg-black/85 mx-auto left-0 right-0 flex flex-col items-center'>
 
