@@ -5,7 +5,6 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
-
 import { app } from "../utils/firebase";
 
 const auth = getAuth(app);

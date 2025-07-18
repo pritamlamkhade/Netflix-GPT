@@ -22,7 +22,7 @@
 - Update the store with the trailer video data
 - Embeded the youtube video and make autoplay and mute
 - Created secondary container for browse page - movie list, movie card, custom hooks for diff movie lists
-- refactor: separate routes into public and private, created a centralized routes constants file, modularize auth and Firebase logic
+- Refactor: separate routes into public and private, created a centralized routes constants file, modularize auth and Firebase logic
 
 # Features
 
