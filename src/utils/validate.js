@@ -1,8 +1,19 @@
-export const checkValidData = ({ type, name, email, password, newPassword, confirmPassword }) => {
-  const isEmailValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+export const checkValidData = ({
+  type,
+  name,
+  email,
+  password,
+  newPassword,
+  confirmPassword,
+}) => {
+  const isEmailValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
+    email
+  );
 
-  const isPasswordValid = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/
-    .test(type === "signup" ? newPassword : password);
+  const isPasswordValid =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/.test(
+      type === "signup" ? newPassword : password
+    );
 
   if (!isEmailValid) return "Please enter a valid email address.";
 
