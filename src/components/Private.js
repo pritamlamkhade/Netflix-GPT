@@ -5,7 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Browse from "./Browse";
-import { ROUTES } from "./Routes";
+import { ROUTES } from "../constants/Routes";
 
 const Private = () => {
   const appRouter = createBrowserRouter([

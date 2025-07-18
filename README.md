@@ -23,6 +23,8 @@
 - Embeded the youtube video and make autoplay and mute
 - Created secondary container for browse page - movie list, movie card, custom hooks for diff movie lists
 - Refactor: separate routes into public and private, created a centralized routes constants file, modularize auth and Firebase logic
+- Refactor: modularize codebase with feature-based folder structure
+- Moved related components, hooks, and slices into feature-specific folders
 
 # Features
 

@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { LOGO } from "../utils/constant";
-import { removeUser } from "../utils/userSlice";
-import { ROUTES } from "./Routes";
+import { LOGO } from "../constants/constant";
+import { removeUser } from "../auth/userSlice";
+import { ROUTES } from "../constants/Routes";
 import { signOutUser } from "../auth/auth";
 
 const Header = () => {

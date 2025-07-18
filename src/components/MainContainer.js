@@ -1,6 +1,6 @@
 import React from "react";
-import VideoBackground from "./VideoBackground";
-import VideoDescription from "./VideoDescription";
+import VideoBackground from "../movies/VideoBackground";
+import VideoDescription from "../movies/VideoDescription";
 import { useSelector } from "react-redux";
 
 const MainContainer = () => {

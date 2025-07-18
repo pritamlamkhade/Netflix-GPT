@@ -1,5 +1,5 @@
 import React from "react";
-import { CDN_IMG_URL } from "../utils/constant";
+import { CDN_IMG_URL } from "../constants/constant";
 
 const MovieCard = ({ movie }) => {
   console.log(movie);

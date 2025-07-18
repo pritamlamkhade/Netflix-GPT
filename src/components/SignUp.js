@@ -1,13 +1,13 @@
 import React, { useRef, useState } from "react";
 import Header from "./Header";
-import { checkValidData } from "../utils/validate";
+import { checkValidData } from "../auth/validate";
 import { Eye, EyeOff } from "lucide-react";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addUser } from "../utils/userSlice";
-import { USER_IMG } from "../utils/constant";
-import { ROUTES } from "./Routes";
+import { addUser } from "../auth/userSlice";
+import { USER_IMG } from "../constants/constant";
+import { ROUTES } from "../constants/Routes";
 import { registerUser } from "../auth/auth";
 
 const SignUp = () => {

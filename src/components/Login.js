@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
-import { checkValidData } from "../utils/validate";
+import { checkValidData } from "../auth/validate";
 import { Eye, EyeOff } from "lucide-react";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
-import { LOGO } from "../utils/constant";
+import { LOGO } from "../constants/constant";
 import { useDispatch } from "react-redux";
-import { addUser } from "../utils/userSlice";
+import { addUser } from "../auth/userSlice";
 import { loginUser } from "../auth/auth";
 
 const Login = () => {

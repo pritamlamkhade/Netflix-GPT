@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import SignUp from "./SignUp";
 import Login from "./Login";
-import { ROUTES } from "./Routes";
+import { ROUTES } from "../constants/Routes";
 
 const Public = () => {
   const appRouter = createBrowserRouter([
