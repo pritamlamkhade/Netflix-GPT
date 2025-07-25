@@ -1,2 +1,0 @@
-export const OPENAI_KEY =
-  "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";
