@@ -51,11 +51,11 @@ const Login = () => {
         </div>
       </div>
 
-      <div className="absolute bg-template"></div>
+      <div className="absolute bg-template h-full"></div>
 
       <form
         onSubmit={(e) => e.preventDefault()}
-        className=" w-[480px] border-black/85 rounded py-14 px-14 mt-40 absolute bg-black/85 mx-auto left-0 right-0 flex flex-col items-center"
+        className=" w-full md:w-[480px] border-black/85 rounded py-14 px-14 mt-40 absolute bg-black/85 mx-auto left-0 right-0 flex flex-col items-center"
       >
         <h1 className="text-white font-extrabold text-3xl mb-6 ml-2 self-start">
           Sign In

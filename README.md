@@ -25,6 +25,8 @@
 - Refactor: separate routes into public and private, created a centralized routes constants file, modularize auth and Firebase logic
 - Refactor: modularize codebase with feature-based folder structure
 - Moved related components, hooks, and slices into feature-specific folders
+- CSS changes for responsive UI
+- Created GptSuggestionPage with SearchBar and Movie suggestions based on search result using openai gpt-3.5-turbo API
 
 # Features
 

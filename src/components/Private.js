@@ -5,7 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Browse from "./Browse";
-import { ROUTES } from "../constants/Routes";
+import { ROUTES } from "../constants/routes";
 
 const Private = () => {
   const appRouter = createBrowserRouter([
@@ -24,7 +24,7 @@ const Private = () => {
   ]);
 
   return (
-    <div className="bg-white h-screen w-screen">
+    <div className=" h-screen w-screen">
       <RouterProvider router={appRouter} />
     </div>
   );

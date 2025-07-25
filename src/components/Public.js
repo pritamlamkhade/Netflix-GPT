@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import SignUp from "./SignUp";
 import Login from "./Login";
-import { ROUTES } from "../constants/Routes";
+import { ROUTES } from "../constants/routes";
 
 const Public = () => {
   const appRouter = createBrowserRouter([
@@ -25,7 +25,7 @@ const Public = () => {
   ]);
 
   return (
-    <div className="bg-white h-screen w-screen">
+    <div className=" h-screen w-screen">
       <RouterProvider router={appRouter} />
     </div>
   );
