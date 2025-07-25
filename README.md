@@ -27,6 +27,7 @@
 - Moved related components, hooks, and slices into feature-specific folders
 - CSS changes for responsive UI
 - Created GptSuggestionPage with SearchBar and Movie suggestions based on search result using openai gpt-3.5-turbo API
+- Added multilanguage support to Login page using react-i18next
 
 # Features
 

@@ -10,12 +10,22 @@ import {
   addGptMovieResult,
   toggleGPTSearchView,
 } from "../gptSuggestion/gptSlice";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
+
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (e) => {
+    const selectedLang = e.target.value;
+    if (typeof selectedLang === "string") {
+      i18n.changeLanguage(selectedLang);
+    }
+  };
 
   const handleSignOut = async () => {
     try {
@@ -47,6 +57,15 @@ const Header = () => {
             <Search />
             {showGptSearch ? "Browse All" : "GPT Suggest"}
           </button>
+          <select
+            value={i18n.language}
+            onChange={changeLanguage}
+            className="bg-white text-black rounded mx-4 px-2 py-1"
+          >
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="mr">मराठी</option>
+          </select>
           <div className="flex items-center ">
             <img
               className="rounded mr-2 h-7 w-7"
@@ -61,14 +80,20 @@ const Header = () => {
             className="text-white font-bold  ml-4 mr-8  w-28  h-8  rounded bg-red-600  "
             onClick={handleSignOut}
           >
-            Sign Out
+            {t("Sign Out")}
           </button>
         </div>
       ) : (
         <div className="p-4 mr-20 flex items-center">
-          <button className="text-white w-32 h-8 mx-4 border border-gray-300 rounded">
-            English
-          </button>
+          <select
+            value={i18n.language}
+            onChange={changeLanguage}
+            className="bg-white text-black rounded mx-4 px-2 py-1"
+          >
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="mr">मराठी</option>
+          </select>
           <button
             className="text-white w-20  h-8  rounded bg-red-600 font-medium "
             onClick={() => navigate(ROUTES.LOGIN)}
