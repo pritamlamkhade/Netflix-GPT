@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
-import { addTopRatedMovies } from "../utils/moviesSlice";
 import { useEffect } from "react";
-import { API_OPTIONS } from "../utils/constant";
+import { API_OPTIONS } from "../../constants/constant";
+import { addTopRatedMovies } from "../moviesSlice";
 
 const useTopRatedMovies = () => {
   const dispatch = useDispatch();

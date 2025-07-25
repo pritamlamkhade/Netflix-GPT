@@ -1,16 +1,21 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { LOGO } from "../utils/constant";
-import { removeUser } from "../utils/userSlice";
-import { ROUTES } from "./Routes";
+import { LOGO } from "../constants/constant";
+import { removeUser } from "../auth/userSlice";
+import { ROUTES } from "../constants/routes";
 import { signOutUser } from "../auth/auth";
+import { Search } from "lucide-react";
+import {
+  addGptMovieResult,
+  toggleGPTSearchView,
+} from "../gptSuggestion/gptSlice";
 
 const Header = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
   const user = useSelector((store) => store.user);
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
 
   const handleSignOut = async () => {
     try {
@@ -22,14 +27,26 @@ const Header = () => {
     }
   };
 
+  const HandleGptSearchCLick = () => {
+    dispatch(toggleGPTSearchView());
+    dispatch(addGptMovieResult({ gptMovieNames: null, gptMovies: null }));
+  };
+
   return (
-    <div className="absolute h-[80px] w-full flex justify-between bg-gradient-to-b from-black  min-w-[650px] z-10">
-      <div className="pl-20 py-2 bg-gradient-to-b from-black">
+    <div className="absolute h-[80px] w-full flex justify-between bg-gradient-to-b from-black  min-w-[650px] z-10 md:flex-row flex-col">
+      <div className="pl-2 md:pl-20 py-2 bg-gradient-to-b from-black">
         <img className="w-48" src={LOGO} alt="logo"></img>
       </div>
 
       {user ? (
         <div className="flex items-center">
+          <button
+            onClick={HandleGptSearchCLick}
+            className="text-white mx-4 p-2 h-[34px] rounded font-medium flex items-center justify-center gap-2"
+          >
+            <Search />
+            {showGptSearch ? "Browse All" : "GPT Suggest"}
+          </button>
           <div className="flex items-center ">
             <img
               className="rounded mr-2 h-7 w-7"
@@ -48,7 +65,7 @@ const Header = () => {
           </button>
         </div>
       ) : (
-        <div className="p-4 mr-20 flex items-center bg-gradient-to-b from-black">
+        <div className="p-4 mr-20 flex items-center">
           <button className="text-white w-32 h-8 mx-4 border border-gray-300 rounded">
             English
           </button>

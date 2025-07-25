@@ -1,13 +1,13 @@
 import React, { useRef, useState } from "react";
 import Header from "./Header";
-import { checkValidData } from "../utils/validate";
+import { checkValidData } from "../auth/validate";
 import { Eye, EyeOff } from "lucide-react";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addUser } from "../utils/userSlice";
-import { USER_IMG } from "../utils/constant";
-import { ROUTES } from "./Routes";
+import { addUser } from "../auth/userSlice";
+import { USER_IMG } from "../constants/constant";
+import { ROUTES } from "../constants/routes";
 import { registerUser } from "../auth/auth";
 
 const SignUp = () => {
@@ -61,10 +61,10 @@ const SignUp = () => {
   return (
     <div>
       <Header />
-      <div className="absolute bg-template"></div>
+      <div className="absolute bg-template h-full"></div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className=" w-[480px] border-black/85 rounded py-14 px-14 mt-40 absolute bg-black/85 mx-auto left-0 right-0 flex flex-col items-center"
+        className=" w-full md:w-[480px] border-black/85 rounded py-14 px-14 mt-40 absolute bg-black/85 mx-auto left-0 right-0 flex flex-col items-center"
       >
         <h1 className="text-white font-extrabold text-3xl mb-6 ml-2 self-start">
           Sign Up

@@ -1,8 +1,8 @@
 import React from "react";
-import { CDN_IMG_URL } from "../utils/constant";
+import { CDN_IMG_URL } from "../constants/constant";
 
 const MovieCard = ({ movie }) => {
-  console.log(movie);
+  if (!movie.poster_path) return;
   return (
     <div className="w-48 mr-4 rounded">
       <img
