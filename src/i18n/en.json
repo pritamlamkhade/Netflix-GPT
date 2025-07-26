@@ -29,5 +29,8 @@
   "Play": "Play",
   "More Info": "More Info",
   "What would you like to watch today?": "What would you like to watch today?",
-  "Search": "Search"
+  "Search": "Search",
+  "gpt_no_results_heading": "Find the perfect movie 🎬",
+  "gpt_no_results_description": "Ask GPT to suggest movies by genre, mood, or even your favorite film!"
+
 }
