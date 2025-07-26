@@ -49,7 +49,7 @@ const Header = () => {
             className="text-white mx-4 p-2 h-[34px] rounded font-medium flex items-center justify-center gap-2"
           >
             <Search />
-            {showGptSearch ? "Browse All" : "GPT Suggest"}
+            {showGptSearch ? t("Browse All") : t("GPT Suggest")}
           </button>
           <LanguageSelector />
           <div className="flex items-center ">
@@ -76,7 +76,7 @@ const Header = () => {
             className="text-white w-20  h-8  rounded bg-red-600 font-medium "
             onClick={() => navigate(ROUTES.LOGIN)}
           >
-            Sign In
+            {t("Sign In")}
           </button>
         </div>
       )}

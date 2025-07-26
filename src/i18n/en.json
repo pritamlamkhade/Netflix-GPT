@@ -1,5 +1,14 @@
 {
+  "English": "English",
+  "Hindi": "Hindi",
+  "Marathi": "Marathi",
   "Sign In": "Sign In",
+  "Sign Up": "Sign Up",
+  "Sign Out": "Sign Out",
+  "Full Name": "Full Name",
+  "New Password": "New Password",
+  "Confirm New Password": "Confirm New Password",
+  "Already registered?": "Already registered?",
   "Email or mobile number": "Email or mobile number",
   "Password": "Password",
   "Invalid email or password.": "Invalid email or password.",
@@ -11,7 +20,14 @@
   "Sign up now.": "Sign up now.",
   "recaptcha_note": "This page is protected by Google reCAPTCHA to ensure you're not a bot.",
   "Learn more.": "Learn more.",
-  "English": "English",
-  "Hindi": "Hindi",
-  "Marathi": "Marathi"
+  "GPT Suggest": "GPT Suggest",
+  "Browse All": "Browse All",
+  "Now Playing": "Now Playing",
+  "Top Rated": "Top Rated",
+  "Popular": "Popular",
+  "Upcoming": "Upcoming",
+  "Play": "Play",
+  "More Info": "More Info",
+  "What would you like to watch today?": "What would you like to watch today?",
+  "Search": "Search"
 }

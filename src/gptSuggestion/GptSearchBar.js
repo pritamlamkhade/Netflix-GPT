@@ -3,10 +3,12 @@ import React, { useRef } from "react";
 import { API_OPTIONS } from "../constants/constant";
 import { useDispatch } from "react-redux";
 import { addGptMovieResult } from "./gptSlice";
+import { useTranslation } from "react-i18next";
 
 const GptSearchBar = () => {
   const searchText = useRef(null);
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   const searchMovieTMDB = async (movie) => {
     const data = await fetch(
@@ -51,13 +53,13 @@ const GptSearchBar = () => {
           type="text"
           ref={searchText}
           className="px-4 py-2 m-4 col-span-9 rounded"
-          placeholder=" What would you like to watch today?"
+          placeholder={t("What would you like to watch today?")}
         ></input>
         <button
           className="col-span-3 bg-red-500 rounded text-white px-4 py-2 m-4"
           onClick={handleGPTSearchClick}
         >
-          Search
+          {t("Search")}
         </button>
       </form>
     </div>
