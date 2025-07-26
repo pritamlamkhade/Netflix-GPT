@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 import { addUser } from "../auth/userSlice";
 import { loginUser } from "../auth/auth";
 import { useTranslation } from "react-i18next";
+import LanguageSelector from "./LanguageSelector";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -16,13 +17,7 @@ const Login = () => {
   const password = useRef(null);
   const [errorMessage, setErrorMessage] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
-  const { t, i18n } = useTranslation();
-  const changeLanguage = (e) => {
-    const selectedLang = e.target.value;
-    if (typeof selectedLang === "string") {
-      i18n.changeLanguage(selectedLang);
-    }
-  };
+  const { t } = useTranslation();
 
   const handleButtonClick = async () => {
     const message = checkValidData({
@@ -57,15 +52,7 @@ const Login = () => {
         <div className="pl-32 py-2 bg-gradient-to-b from-black">
           <img className="w-48" src={LOGO} alt="logo"></img>
         </div>
-        <select
-          value={i18n.language}
-          onChange={changeLanguage}
-          className="bg-white text-black rounded mx-4 px-2 h-8 self-center "
-        >
-          <option value="en">English</option>
-          <option value="hi">हिन्दी</option>
-          <option value="mr">मराठी</option>
-        </select>
+        <LanguageSelector />
       </div>
 
       <div className="absolute bg-template h-full"></div>

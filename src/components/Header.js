@@ -11,6 +11,7 @@ import {
   toggleGPTSearchView,
 } from "../gptSuggestion/gptSlice";
 import { useTranslation } from "react-i18next";
+import LanguageSelector from "./LanguageSelector";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -18,14 +19,7 @@ const Header = () => {
   const user = useSelector((store) => store.user);
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
 
-  const { t, i18n } = useTranslation();
-
-  const changeLanguage = (e) => {
-    const selectedLang = e.target.value;
-    if (typeof selectedLang === "string") {
-      i18n.changeLanguage(selectedLang);
-    }
-  };
+  const { t } = useTranslation();
 
   const handleSignOut = async () => {
     try {
@@ -57,15 +51,7 @@ const Header = () => {
             <Search />
             {showGptSearch ? "Browse All" : "GPT Suggest"}
           </button>
-          <select
-            value={i18n.language}
-            onChange={changeLanguage}
-            className="bg-white text-black rounded mx-4 px-2 py-1"
-          >
-            <option value="en">English</option>
-            <option value="hi">हिन्दी</option>
-            <option value="mr">मराठी</option>
-          </select>
+          <LanguageSelector />
           <div className="flex items-center ">
             <img
               className="rounded mr-2 h-7 w-7"
@@ -85,15 +71,7 @@ const Header = () => {
         </div>
       ) : (
         <div className="p-4 mr-20 flex items-center">
-          <select
-            value={i18n.language}
-            onChange={changeLanguage}
-            className="bg-white text-black rounded mx-4 px-2 py-1"
-          >
-            <option value="en">English</option>
-            <option value="hi">हिन्दी</option>
-            <option value="mr">मराठी</option>
-          </select>
+          <LanguageSelector />
           <button
             className="text-white w-20  h-8  rounded bg-red-600 font-medium "
             onClick={() => navigate(ROUTES.LOGIN)}
