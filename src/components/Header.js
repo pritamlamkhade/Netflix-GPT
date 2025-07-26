@@ -43,7 +43,7 @@ const Header = () => {
       </div>
 
       {user ? (
-        <div className="flex items-center">
+        <div className="flex items-center min-w-[520px]">
           <button
             onClick={HandleGptSearchCLick}
             className="text-white mx-4 p-2 h-[34px] rounded font-medium flex items-center justify-center gap-2"
