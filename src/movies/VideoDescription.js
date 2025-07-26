@@ -18,7 +18,7 @@ const VideoDescription = ({ title, overview }) => {
           <Play color="black" size={30} />
           {t("Play")}
         </button>
-        <button className="hidden md:flex bg-gray-500 text-white mx-4 rounded p-3 px-8 text-2xl font-bold hover:bg-opacity-80 flex items-center gap-x-2">
+        <button className="hidden md:flex bg-gray-500 text-white mx-4 rounded p-3 px-8 text-2xl font-bold hover:bg-opacity-80  items-center gap-x-2">
           <Info color="white" size={30} />
           {t("More Info")}
         </button>
