@@ -96,7 +96,7 @@
    npm install
    ```
 
-3. **Setup **``** file**
+3. **Setup **`env`** file**
 
    ```env
    REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
