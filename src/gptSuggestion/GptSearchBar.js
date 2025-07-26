@@ -33,7 +33,10 @@ const GptSearchBar = () => {
     //   model: "gpt-3.5-turbo",
     //   input: gptQuery,
     // });
-    if (searchText.current.value.trim() === "") return;
+    if (searchText.current.value.trim() === "") {
+      dispatch(addGptMovieResult({ gptMovieNames: null, gptMovies: null }));
+      return;
+    }
 
     const gptMovies = ["Gadar", "sholey", "Golmal", "Hera pheri", "Welcome"];
     const promiseArray = gptMovies.map((movie) => searchMovieTMDB(movie));
