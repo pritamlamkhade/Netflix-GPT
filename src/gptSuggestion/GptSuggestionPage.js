@@ -6,7 +6,7 @@ import { BG_IMG } from "../constants/constant";
 const GptSuggestionPage = () => {
   return (
     <div className=" pt-[10%]">
-      <img className="bg-template2" src={BG_IMG} alt="bg"></img>
+      <img className="bg-template" src={BG_IMG} alt="bg"></img>
       <GptSearchBar />
       <GptMovieSuggestion />
     </div>

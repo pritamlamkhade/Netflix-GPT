@@ -3,7 +3,7 @@ import { checkValidData } from "../auth/validate";
 import { Eye, EyeOff } from "lucide-react";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
-import { LOGO } from "../constants/constant";
+import { BG_IMG, LOGO } from "../constants/constant";
 import { useDispatch } from "react-redux";
 import { addUser } from "../auth/userSlice";
 import { loginUser } from "../auth/auth";
@@ -55,11 +55,11 @@ const Login = () => {
         <LanguageSelector />
       </div>
 
-      <div className="absolute bg-template h-full"></div>
+      <img className="bg-template" src={BG_IMG} alt="bg"></img>
 
       <form
         onSubmit={(e) => e.preventDefault()}
-        className=" w-full md:w-[480px] border-black/85 rounded py-14 px-14 mt-40 absolute bg-black/85 mx-auto left-0 right-0 flex flex-col items-center"
+        className=" w-[480px] border-black/85 rounded py-14 px-14 mt-40 absolute bg-black/85 mx-auto left-0 right-0 flex flex-col items-center"
       >
         <h1 className="text-white font-extrabold text-3xl mb-6 ml-2 self-start">
           {t("Sign In")}
