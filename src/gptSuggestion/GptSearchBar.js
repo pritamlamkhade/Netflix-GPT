@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-// import openai from "../utils/openai";
+import openai from "../utils/openai";
 import { API_OPTIONS } from "../constants/constant";
 import { useDispatch } from "react-redux";
 import { addGptMovieResult } from "./gptSlice";
@@ -23,16 +23,19 @@ const GptSearchBar = () => {
   };
 
   const handleGPTSearchClick = async () => {
-    // const gptQuery =
-    //   "Act as a movie recommondation system and suugest some movies for the query :" +
-    //   searchText.current.value +
-    //   ". only give me names of 5 movies in comma separated format like the example given ahead. Example result : Gadar, sholey, Golmal, Hera pheri, Welcome";
-    // console.log(gptQuery);
+    if (searchText.current.value.trim() !== "") {
+      // const gptQuery =
+      //   "Act as a movie recommondation system and suugest some movies for the query :" +
+      //   searchText.current.value +
+      //   ". only give me names of 5 movies in comma separated format like the example given ahead. Example result : Gadar, sholey, Golmal, Hera pheri, Welcome";
+      // console.log(gptQuery);
+      // const response = await openai.responses.create({
+      //   model: "gpt-3.5-turbo",
+      //   input: gptQuery,
+      // });
+      // console.log(response);
+    }
 
-    // const response = await openai.responses.create({
-    //   model: "gpt-3.5-turbo",
-    //   input: gptQuery,
-    // });
     if (searchText.current.value.trim() === "") {
       dispatch(addGptMovieResult({ gptMovieNames: null, gptMovies: null }));
       return;

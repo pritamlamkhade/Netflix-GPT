@@ -1,6 +1,6 @@
 # 🎥 Netflix-GPT
 
-**Netflix-GPT** is a modern streaming platform UI clone built with **React**, powered by **TMDB** for movie data and **OpenAI GPT** for intelligent search suggestions. It features authentication using **Firebase**, a responsive UI with **TailwindCSS**, and supports multiple languages using **react-i18next**.
+**Netflix-GPT** is a modern streaming platform UI clone built with **React**, powered by **TMDB** for movie data and **OpenAI GPT** for intelligent search suggestions. It features **Firebase** authentication with persistent login, a responsive UI with **TailwindCSS**, and supports multiple languages using **react-i18next**.
 
 🚀 **Live Demo**: [https://netflixgpt-1fe73.web.app/](https://netflixgpt-1fe73.web.app/)
 
