@@ -78,6 +78,7 @@
 - ✅ Multilingual UI with react-i18next
 - ✅ Modular folder structure and code refactoring
 - ✅ Responsive UI for desktop and mobile
+- ✅ Persist user session across reloads using localStorage and Redux preloadedState
 
 ---
 
