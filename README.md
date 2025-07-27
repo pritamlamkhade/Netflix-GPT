@@ -117,3 +117,19 @@
 ## 📄 License
 
 This project is for educational purposes. It is not affiliated with or endorsed by Netflix.
+
+## 🙋‍♂️ Contributing
+
+Pull requests are welcome. If you find a bug or want to propose a feature, feel free to [open an issue](https://github.com/pritamlamkhade/Netflix-GPT/issues).
+
+---
+
+## 👨‍💻 Author
+
+- [Pritam Lamkhade](https://www.linkedin.com/in/pritamlamkhade/)
+
+---
+
+## ⭐️ Show Support
+
+If you like this project, leave a ⭐️ and consider sharing!
