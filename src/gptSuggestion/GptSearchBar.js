@@ -41,7 +41,7 @@ const GptSearchBar = () => {
       return;
     }
 
-    const gptMovies = ["Gadar", "sholey", "Golmal", "Hera pheri", "Welcome"];
+    const gptMovies = ["Golmal", "Hera pheri", "Welcome","Gadar", "sholey"];
     const promiseArray = gptMovies.map((movie) => searchMovieTMDB(movie));
     const tmdbResults = await Promise.all(promiseArray);
 

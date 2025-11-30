@@ -32,14 +32,14 @@ const Login = () => {
       const user = await loginUser(email.current.value, password.current.value);
       if (user) {
         const { uid, email, displayName, photoURL } = auth.currentUser;
-        dispatch(
-          addUser({
+        dispatch( {type:addUser, payload:
+          {
             uid: uid,
             email: email,
             displayName: displayName,
             photoURL: photoURL,
-          })
-        );
+          }}
+        )
       }
     } catch (error) {
       setErrorMessage(t("Invalid email or password."));
